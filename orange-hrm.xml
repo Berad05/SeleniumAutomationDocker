@@ -1,0 +1,17 @@
+
+<suite name="Google Search Test">
+ <test name="Google Search tests">
+
+     <parameters>
+         <parameter name="userName" value="Admin"/>
+         <parameter name="password" value="admin123"/>
+     </parameters>
+   <classes>
+
+       <class name="com.orangehrm.tests.LoginpageTest"/>
+   </classes>
+
+ </test>
+
+
+</suite>
