@@ -17,6 +17,17 @@ public class OrangeHomePage {
     @FindBy(xpath="//input[@placeholder='Search']")
     private WebElement txtSearch;
 
+
+
+    @FindBy(xpath="//span[text()='Admin']/parent::a")
+    private WebElement lnkAdminModule;
+
+    @FindBy(css = "p.oxd-userdropdown-name")
+    private WebElement dropdwnLogout;
+
+    @FindBy(xpath = "//a[text()='Logout']")
+    private WebElement lnkLogout;
+
     public OrangeHomePage(WebDriver driver)
     {
         this.driver=driver;
@@ -26,5 +37,18 @@ public class OrangeHomePage {
     public WebElement loginSuccessful()
     {
         return this.wait.until(ExpectedConditions.visibilityOf(txtSearch));
+    }
+
+    public AdminModulePage navigate_to_admin_module()
+    {
+        lnkAdminModule.click();
+        return new AdminModulePage(driver);
+    }
+
+
+    public void logout()
+    {
+        dropdwnLogout.click();
+        lnkLogout.click();
     }
 }

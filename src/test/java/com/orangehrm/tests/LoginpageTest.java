@@ -1,6 +1,7 @@
 package com.orangehrm.tests;
 
 import com.base.tests.BaseTest;
+import com.orangehrm.pages.AdminModulePage;
 import com.orangehrm.pages.LoginPage;
 import com.orangehrm.pages.OrangeHomePage;
 import org.testng.Assert;
@@ -11,6 +12,7 @@ public class LoginpageTest extends BaseTest {
 
     LoginPage lp;
     OrangeHomePage homePage;
+    AdminModulePage adminmodulepage;
 
     @Test
     @Parameters({"userName","password"})
@@ -20,5 +22,9 @@ public class LoginpageTest extends BaseTest {
         lp.goToOrangeHRMLoginPage();
         homePage=lp.LoginOrangeHrm(userName,password);
         Assert.assertTrue(homePage.loginSuccessful().isDisplayed());
+        homePage.logout();
     }
+
+
+
 }

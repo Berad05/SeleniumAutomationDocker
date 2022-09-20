@@ -1,6 +1,6 @@
 
-<suite name="Google Search Test">
- <test name="Google Search tests">
+<suite name="Orange HRM Test">
+ <test name="Orange HRM test">
 
      <parameters>
          <parameter name="userName" value="Admin"/>
