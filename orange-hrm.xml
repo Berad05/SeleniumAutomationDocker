@@ -1,5 +1,5 @@
 
-<suite name="Orange HRM Test">
+<suite name="Orange HRM Test" parallel="tests" thread-count="2">
  <test name="Orange HRM test">
 
      <parameters>
@@ -7,11 +7,20 @@
          <parameter name="password" value="admin123"/>
      </parameters>
    <classes>
-
        <class name="com.orangehrm.tests.LoginpageTest"/>
    </classes>
 
  </test>
 
+    <test name="google Search test">
 
+        <parameters>
+            <parameter name="SearchKeyword" value="WebDriver"/>
+            <parameter name="Title" value="What is Selenium WebDriver Architecture? - YouTube"/>
+        </parameters>
+        <classes>
+            <class name="com.googlesearch.tests.GoogleHomepageTest"/>
+        </classes>
+
+    </test>
 </suite>
